@@ -1,4 +1,4 @@
-using CpfTools.Domain;
+using CpfTools.Domain.Utilities;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace CpfTools.Tests

@@ -5,17 +5,17 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace CpfTools.Domain
+namespace CpfTools.Domain.Utilities
 {
     public class Validator
     {
         public bool Validate(string cpf, bool replace = false)
         {
-            if(replace) cpf = Regex.Replace(cpf, "[^0-9]", "");
+            if (replace) cpf = Regex.Replace(cpf, "[^0-9]", "");
 
             var isNumber = Regex.Match(cpf, "^[0-9]+$").Success;
-            if(!isNumber) return false;
-            
+            if (!isNumber) return false;
+
 
             if (cpf.Length != 11)
                 return false;

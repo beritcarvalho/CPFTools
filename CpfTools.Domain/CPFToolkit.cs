@@ -1,6 +1,8 @@
-﻿namespace CpfTools.Domain
+﻿using CpfTools.Domain.Utilities;
+
+namespace CpfTools.Domain
 {
-    public static class CpfTools
+    public static class CPFToolkit
     {
         public static bool Validate(string cpfNumber)
         {
