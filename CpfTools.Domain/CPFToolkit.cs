@@ -19,10 +19,10 @@ namespace CpfTools.Domain
         }
 
         /// <summary>
-        /// Transforms the CPF number into a CPF with a default mask.
+        /// Convert the CPF number into a CPF with a default mask.
         /// </summary>
         /// <param name="cpf">The CPF to be validated must contain only numbers and have 11 digits.</param>
-        /// <returns>Transforms the CPF number into a CPF with a default mask.</returns>
+        /// <returns>If the conversion is successful, returns a string with a CPF mask (XXX.XXX.XXX-XX). If unsuccessful, returns an empty string.</returns>
         public static string Mask(string cpfNumber)
         {          
             return _maskUtis.Mask(cpfNumber);
@@ -32,7 +32,7 @@ namespace CpfTools.Domain
         /// Remove CPF mask.
         /// </summary>
         /// <param name="cpf">The parameter entered has no restriction on quantity or values, but must contain 11 numeric digits</param>
-        /// <returns>Return a string of 11 numeric digits</returns>
+        /// <returns>Return an 11-digit numeric string. If after removing non-numeric characters, the string length is less than 11, returns an empty string</returns>
         public static string RemoveMask(string cpfNumber)
         {
             return _maskUtis.RemoveCPFMask(cpfNumber);

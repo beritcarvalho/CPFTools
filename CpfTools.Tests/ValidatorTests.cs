@@ -4,30 +4,25 @@ using static System.Net.Mime.MediaTypeNames;
 namespace CpfTools.Tests
 {
     [TestClass]
-    public class ValidatorTests
+    public class _validatorTests
     {
+        private readonly Validator _validator = new();
         [TestMethod]
         public void ShoudReturnTrueWhenCPFIsValidWithoutReplace()
         {
-            Validator validator = new();
-
-            Assert.IsTrue(validator.Validate("39339959817"));  
+            Assert.IsTrue(_validator.Validate("39339959817"));  
         }
 
         [TestMethod]
         public void ShoudReturnTrueWhenCPFIsValidWithReplace()
         {
-            Validator validator = new();
-
-            Assert.IsTrue(validator.Validate("393.399.598-17", true));
+            Assert.IsTrue(_validator.Validate("393.399.598-17", true));
         }
 
         [TestMethod]
         public void ShoudReturnFalseWhenCPFIsInvalidWithoutReplace()
         {
-            Validator validator = new();
-
-            Assert.IsFalse(validator.Validate("393.399.598-17") || validator.Validate("39339959818"));
+            Assert.IsFalse(_validator.Validate("393.399.598-17") || _validator.Validate("39339959818"));
         }
     }
 }
