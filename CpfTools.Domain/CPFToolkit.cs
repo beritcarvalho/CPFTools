@@ -8,7 +8,7 @@ namespace CpfTools
         private static readonly MaskCpf _maskUtis = new MaskCpf();
 
         /// <summary>
-        /// Checks if the entered value is a valid CPFRemove CPF mask.
+        /// Verifies that the value entered is valid CPF.
         /// </summary>
         /// <param name="cpf">Value to be validated</param>
         /// <param name="replace">Optional parameter, which activates the removal of any non-numeric character.To activate, parameterize the value true.</param>
