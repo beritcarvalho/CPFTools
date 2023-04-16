@@ -24,7 +24,7 @@ namespace CpfTools.Domain
         /// <param name="cpf">The CPF to be validated must contain only numbers and have 11 digits.</param>
         /// <returns>If the conversion is successful, returns a string with a CPF mask (XXX.XXX.XXX-XX). If unsuccessful, returns an empty string.</returns>
         public static string Mask(string cpfNumber)
-        {          
+        {
             return _maskUtis.Mask(cpfNumber);
         }
 

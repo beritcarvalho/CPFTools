@@ -1,10 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.1</Version>
+	
+	
+	<PackageId>BeriDev.CpfTools</PackageId>  
+    <Version>1.0.0</Version>
+    <Authors>Berit Carvalho</Authors>
+    <Company>BeriDev</Company>
+    <Description>Pacote com ferramentas para facilitar a manipulação de CPF's.</Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/beritcarvalho/CPFTools</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/beritcarvalho/CPFTools</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>CPF;Cpf Validator; validação de CPF;converter;berit</PackageTags>
+    <Title>CPF Tools</Title>
+	<Summary>A versão atual conta com validador, que recebe um valor e verifica se o valor recebido é um CPF válido. - As ferramentas de máscaras, permitem mascarar ou retirar as mascaras de um CPF</Summary>
+	<Copyright>Berit Ara Shalon de Carvalho</Copyright>	
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Media\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

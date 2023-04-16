@@ -11,7 +11,7 @@ namespace CpfTools.Domain.Utilities
     {
         private readonly Regex _maskCpfExample = new Regex(@"^\d{3}\.\d{3}\.\d{3}\-\d{2}$");
         public string Mask(string cpf)
-        {            
+        {
             if (_maskCpfExample.IsMatch(cpf))
                 return cpf;
 
@@ -21,9 +21,9 @@ namespace CpfTools.Domain.Utilities
                 return "";
 
             string maskedCpf = Regex.Replace(cpf, @"(\d{3})(\d{3})(\d{3})(\d{2})", "$1.$2.$3-$4");
-            return maskedCpf; 
+            return maskedCpf;
         }
-        
+
         public string RemoveCPFMask(string cpf)
         {
             cpf = Regex.Replace(cpf, "[^0-9]", "");
