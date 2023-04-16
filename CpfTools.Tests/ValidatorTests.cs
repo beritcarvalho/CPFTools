@@ -10,19 +10,19 @@ namespace CpfTools.Tests
         [TestMethod]
         public void ShoudReturnTrueWhenCPFIsValidWithoutReplace()
         {
-            Assert.IsTrue(_validator.Validate("39339959817"));  
+            Assert.IsTrue(_validator.Validate("57658368873"));  
         }
 
         [TestMethod]
         public void ShoudReturnTrueWhenCPFIsValidWithReplace()
         {
-            Assert.IsTrue(_validator.Validate("393.399.598-17", true));
+            Assert.IsTrue(_validator.Validate("576.583.688-73", true));
         }
 
         [TestMethod]
         public void ShoudReturnFalseWhenCPFIsInvalidWithoutReplace()
         {
-            Assert.IsFalse(_validator.Validate("393.399.598-17") || _validator.Validate("39339959818"));
+            Assert.IsFalse(_validator.Validate("576.583.688-73") || _validator.Validate("57658368874"));
         }
     }
 }
