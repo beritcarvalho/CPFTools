@@ -1,6 +1,6 @@
 ﻿using CpfTools.Domain.Utilities;
 
-namespace CpfTools.Domain
+namespace CpfTools
 {
     public static class CPFToolkit
     {
