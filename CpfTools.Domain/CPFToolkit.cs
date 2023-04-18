@@ -13,9 +13,9 @@ namespace CpfTools
         /// <param name="cpf">Value to be validated</param>
         /// <param name="replace">Optional parameter, which activates the removal of any non-numeric character.To activate, parameterize the value true.</param>
         /// <returns>Returns true if it is a valid cpf and false if it is invalid.</returns>
-        public static bool Validate(string cpfNumber)
+        public static bool Validate(string cpfNumber, bool replace = false)
         {
-            return _validator.Validate(cpfNumber);
+            return _validator.Validate(cpfNumber, replace);
         }
 
         /// <summary>
